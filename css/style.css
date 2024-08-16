@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-/* ----------------------------VARIABLES-------------------------------------------- */
+/* -----Variables----- */
 :root{
     /*-----Colores-----*/
     --siman: #d02d37;
@@ -58,7 +58,7 @@
     }
 }
 
-/*-----CONT MAIN-----*/
+/*-----Container Main-----*/
 
 .container-main{
     width: 100%;
@@ -78,7 +78,7 @@
     }
 }
 
-/*-----SECTION-----*/
+/*-----Section-----*/
 
 .container-section{
     padding: 1.5rem 1.5rem;
@@ -143,7 +143,113 @@
     }
 }
 
-/*-----mediaqueris-----*/
+/*-----Targets-----*/
+
+.container-section2 {
+    text-align: center;
+    margin: 1rem 0px;
+
+    & h2{
+        padding: 1rem;
+        font-family: var(--fontTwo);
+    }
+
+    & .container-targets{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    & .target {
+        width: 300px;
+        max-width: 100%;
+        background-color: var(--white);
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        & .cont-target-img {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            & .target-img {
+                width: 100%;
+                height: 250px;
+                object-fit: contain;
+                border-radius: 8px;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover .target-img {
+                transform: scale(1.03);
+            }
+        }
+        
+        & .target-info {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--bg-light);
+
+            & .target-title {
+                font-family: var(--fontTwo);
+                font-size: 1.4rem;
+                padding-bottom: 0.5rem;
+                color: var(--gray);
+                letter-spacing: 0.5px;
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid #ccc
+            }
+
+            & .target-price {
+                font-family: var(--fontTwo);
+                color: var(--gray);
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            & .btn-buy {
+                font-family: var(--fontTwo);
+                text-decoration: none;
+                display: inline-block;
+                width: 100%;
+                padding: 0.85rem;
+                background-color: var(--siman);
+                color: var(--white);
+                text-align: center;
+                border-radius: 8px;
+                transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+                font-weight: bold;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        
+                & :hover {
+                    background-color: var(--gray);
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }   
+}
+
+/*-----Mediaqueris-----*/
 
 @media (min-width: 320px) and (max-width: 576px){
     .container-header .container-logo{
@@ -169,5 +275,10 @@
         "secThree"
         "secFour"
         ;
+    }
+
+    .target {
+        width: 90%;
+        padding: 1rem;
     }
 }
