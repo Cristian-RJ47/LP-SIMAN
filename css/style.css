@@ -249,6 +249,55 @@
     }   
 }
 
+/*---------------FOOTER----------------*/
+
+.container-footer {
+    margin-top: auto;
+    background-color: var(--bg-light);
+    padding: 1rem; 
+    text-align: center;
+    border-top: 2px solid #ccc;
+    font-family: var(--fontThree);
+
+    & .p-footer {
+        margin: 0;
+        font-size: 14px;
+        color: var(--gray);
+
+        & span {
+            font-weight: bold;
+        }
+    }
+
+    & .item-footer {
+        display: inline-block;
+        margin: 10px 15px;
+        font-size: 14px;
+        color: var(--color-link);
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--color-link-hover);
+        }
+    }
+
+    & .siman-footer {
+        margin-top: 10px;
+
+        & .logo-siman-footer {
+            width: 120px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+
+            &:hover {
+                filter: grayscale(0%);
+            }
+        }
+    }
+}
+
 /*-----Mediaqueris-----*/
 
 @media (min-width: 320px) and (max-width: 576px){
