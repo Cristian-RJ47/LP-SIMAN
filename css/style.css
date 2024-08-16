@@ -16,4 +16,63 @@
     --fontThree: "Poppins", sans-serif;
     --fontFour: "Kalam", sans-serif;
     --fontFive: "Inconsolata", sans-serif;
-}   
+}
+
+/*-----Header-----*/
+
+.container-header{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--oldSiman);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--fontFour);
+
+    & .container-navbar{
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+
+        & .item-navbar{
+            color: var(--white);
+            text-decoration: none;
+            padding: 1rem;
+
+            &:hover{
+                color: var(--oldSiman);
+                background-color: var(--white);
+                transition: background-color 1s , color 1s;
+            }
+        }
+    }
+
+    & .container-logo{
+        width: 15%;
+        margin-left: 1rem;
+
+        & .img-logo{
+            object-fit: cover;
+            color: var(--white);
+        }
+    }
+}
+
+/*-----mediaqueris-----*/
+
+@media (min-width: 320px) and (max-width: 576px){
+    .container-header .container-logo{
+        width: 15%;
+        height: 100%;
+        background-image: url(https://res.cloudinary.com/dklpgm5tu/image/upload/v1723086984/recetario/in77cnsxvy3dkg2275ng.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-left: 1rem;
+    }    
+
+    .container-header .container-logo .img-logo{
+        opacity: 0;
+        color: var(--white);
+    }
+}
