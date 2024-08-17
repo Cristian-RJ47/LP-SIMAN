@@ -52,6 +52,7 @@
         margin-left: 1rem;
 
         & .img-logo{
+            cursor: pointer;
             object-fit: cover;
             color: var(--white);
         }
@@ -249,6 +250,99 @@
     }   
 }
 
+/*-----Formulario-----*/
+
+.section-form {
+    font-family: var(--fontThree);
+    background-color: var(--white);
+    padding: 40px 30px;
+    margin: 40px auto;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    & .form-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & .container-fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+
+            & .form-title {
+                font-size: 26px;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 25px;
+                color: var(--dark);
+            }
+
+            & div {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            & label {
+                display: block;
+                font-size: 16px;
+                color: var(--gray);
+                margin-bottom: 8px;
+                font-weight: 500;
+            }
+
+            input[type="text"],
+            input[type="tel"],
+            input[type="email"] {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-sizing: border-box;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            input[type="text"]:focus,
+            input[type="tel"]:focus,
+            input[type="email"]:focus {
+                border-color: var(--siman);
+                outline: none;
+                box-shadow: 0 0 5px rgba(208, 45, 56, 0.5);
+            }
+
+            & .container-btn-form {
+                margin-top: 20px;
+                width: 100%;
+
+                & .btn-form {
+                    width: 100%;
+                    background-color: var(--siman);
+                    color: var(--white);
+                    border: none;
+                    padding: 12px;
+                    font-size: 18px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
+                    &:hover {
+                        background-color: #e93743;
+                        box-shadow: 0 0 10px rgba(208, 45, 56, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*---------------FOOTER----------------*/
 
 .container-footer {
@@ -293,6 +387,7 @@
 
             &:hover {
                 filter: grayscale(0%);
+                cursor: pointer;
             }
         }
     }
@@ -329,5 +424,21 @@
     .target {
         width: 90%;
         padding: 1rem;
+    }
+
+    .section-form {
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 22px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    .btn-form {
+        font-size: 1rem;
+        padding: 10px;
     }
 }
